@@ -13,7 +13,7 @@
     }
 </script>
 
-<div class="container">
+<div class="page-container">
     <!-- <h2>JSON Format</h2> -->
     <textarea class="left" bind:value={inputJson} placeholder="Enter JSON"
     ></textarea>
@@ -27,8 +27,8 @@
 </div>
 
 <style>
-    .container {
-        display: grid;
+    .page-container {
+        display: flex;
         grid-template-columns: 1fr auto 1fr;
         gap: 10px;
         height: 100%; /* 可根据需要调整高度 */
