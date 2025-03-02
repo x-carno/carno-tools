@@ -1,6 +1,8 @@
 <script lang="ts">
     import { invoke } from "@tauri-apps/api/core";
 
+    import { Button } from "flowbite-svelte";
+
     let inputJson = "";
     let outputJson = "";
 
@@ -17,7 +19,7 @@
     <!-- <h2>JSON Format</h2> -->
     <textarea class="left" bind:value={inputJson} placeholder="Enter JSON"
     ></textarea>
-    <button on:click={formatJson}>Format</button>
+    <Button on:click={formatJson} style="height:50px" class="bg-blue-500!">Format</Button>
     <textarea
         class="right"
         bind:value={outputJson}
@@ -29,9 +31,10 @@
 <style>
     .page-container {
         display: flex;
+        padding: 10px;
         grid-template-columns: 1fr auto 1fr;
         gap: 10px;
-        height: 100%; /* 可根据需要调整高度 */
+        height: 90vh; /* 可根据需要调整高度 */
     }
 
     .left,
@@ -40,9 +43,5 @@
         width: 100%; /* 填满网格单元宽度 */
         height: 100%; /* 填满网格单元高度 */
         box-sizing: border-box; /* 确保边框和内边距不影响尺寸 */
-    }
-
-    button {
-        padding: 10px 20px; /* 美化按钮 */
     }
 </style>
